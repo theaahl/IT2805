@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>CoffeeCorner</title>
+  <link href="../CSS/style.css" rel="stylesheet" />
+  <link rel="icon" type="img/png" href="../img/logo/logorod.png">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <div id="navbarHome">
+    <div class="logo">
+      <a href="homepage.html"><img src="../img/logo/Logogronn.png" alt="logo" width="100"
+          style="border-radius: 50%" /></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="food.html">Food</a></li>
+        <li><a href="drinks.html">Drinks</a></li>
+        <li><a href="about_us.html">About us</a></li>
+        <li>
+        <li><a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li><li
+          id="totalt_i_vognen" style="background-color: white; border-radius: 100px; padding: 3px;">0</li>
+
+      </ul>
+    </nav>
+  </div>
+
+  <div class="mySlides fade">
+    <img class="slides" alt="" src="../img/food/brownie.jpg" />
+  </div>
+  <div class="mySlides fade">
+    <img class="slides" alt="" src="../img/drinks/cb.jpg" />
+  </div>
+  <div class="mySlides fade">
+    <img class="slides" alt="" src="../img/food/cookie.jpg" />
+  </div>
+ <div class="mySlides fade">
+    <img class="slides" alt="" src="../img/div/organic-food.jpg" />
+  </div>
+<div class="mySlides fade">
+    <img class="slides" alt="" src="../img/div/coffeecological.jpg" />
+  </div>
+
+  <div id="title">
+    <p style="font-size: 58px">Welcome to CoffeeCorner</p>
+    <p style="font-size: 46px">Drink coffee and do good</p>
+    <p id="downArrow" style="font-size: 30px" onclick="down()">Click here or scroll to read more▼</p>
+  </div>
+
+  <div id="homepage">
+    <figure>
+      <img src="../img/div/solveig.jpeg" height="626" width="417" id="solfrid" />
+      <figcaption>
+        CEO Solveig Olsen photographed in Bean magazine: coffeeshop of the
+        year, 2017
+      </figcaption>
+    </figure>
+      <h1 style="text-align: center">CoffeeCorner</h1>
+    <p>
+      CoffeeCorner is a caf&eacute; with the underlying vision that great
+      ideas come from great coffee. Therefore we strive to provide our
+      customers coffee from some of the worlds best beans. We also have a
+      greenhouse in our backyard where we grow our own vegetables, to give you
+      the freshest food possible. We are concerned about the environment, and
+      are aware of our role regarding the greener shift. This is why we only
+      use organic products, and encourage our customers to bring their own
+      to-go cup and lunch box when buying drinks and food.
+    </p>
+    <br /><br /><br /><i style="font-size: 23px">Our goal is to help saving the environment without having to compromise
+      quality</i>
+    <p id="quote">- Solveig Olsen, April 2016</p>
+  </div>
+  <div id="divFooter"></div>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="../scripts/footerAndHeader.js"></script>
+  <script src="../scripts/index.js"></script>
+  <script>
+    window.onscroll = function () {
+      myFunction();
+    };
+
+    let pageLen = window.innerHeight;
+
+    function myFunction() {
+      //Inspiration from W3Schools
+      if (
+        document.body.scrollTop > pageLen * 0.85 ||
+        document.documentElement.scrollTop > pageLen * 0.85
+      ) {
+        document.getElementById("navbarHome").className = "changed";
+      } else {
+        document.getElementById("navbarHome").className = "";
+      }
+    }
+
+    let slideIndex = 0;
+    showSlides();
+    //slideshow function, inspiration gotten from the bakery hevd.no
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 4000); // Change image every 2 seconds
+    }
+    generateFooter();
+  </script>
+
+    <script>
+    function down() {
+      window.scrollBy(0, window.innerHeight-110);
+    }
+
+  </script>
+</body>
+
+</html>

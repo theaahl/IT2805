@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <link href="../CSS/style.css" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <!--Script is put here so that we get shopping cart loaded in the beginning-->
+
+  <meta charset="UTF-8" />
+  <link rel="icon" type="img/png" href="../img/logo/logorod.png">
+
+  <title>CoffeeCorner</title>
+  <style>
+        form {
+          position: relative;
+          width: 95%;
+          top: auto;
+        }
+</style>
+</head>
+
+<body>
+  <div id="divHeader"></div>
+
+    
+    
+  <div class="container">
+    <div id="Shopping">
+        <div id="earth">
+            <i class="fa fa-cloud" style='font-size:24px;color: seagreen'></i>
+            <i class='fas fa-paw' style='font-size:24px;color: seagreen'></i>
+            <i class="far fa-sun" style='font-size:24px;color: seagreen'></i>
+            <i class="fa fa-globe-americas" style='font-size:24px;color: seagreen'></i>
+            <a><i class='fas fa-heartbeat' style='font-size:24px;color: seagreen'></i></a>
+        </div>
+      <h1>Shopping Cart</h1>
+      <ul id="handlevognListe"></ul>
+
+
+      <div id="Prices">
+        <div id="totalPrice" style="font-weight: bold"></div>
+        <ul id="price"></ul>
+      </div>
+
+      <form id="extraInfo">
+          <a><i class="fa fa-coffee" aria-hidden="true" style="color:rgb(253, 101, 30);"></i></a>
+        Will you bring your own cup or lunch box? 
+        <input type="checkbox" name="Cup" id="bringCup" onclick="visFremHandlevognListe()"> 
+        <a><i class="fas fa-recycle" style='color:rgb(253, 101, 30);font-size: 24px'></i></a>
+        <br><br>
+        Additional information: <textarea name="comment" form="extraInfo" style="width: 90%; resize: none;"
+          placeholder="F.ex: soy milk, whipped cream, vegetarian caesar salad etc.. "></textarea>
+      </form>
+      
+      <div id="shopping_buttons">
+        <button onclick="emptyCart()" formaction="http://folk.ntnu.no/ceciljor/pages/homepage.html">Pay at cafe <i class="fas fa-couch"></i></button>
+
+        <button onclick="emptyCart()" formaction="http://vipps.no">
+            Pay by
+            <img src="../img/Shopping/Vipps.png" alt="vipps" width="12" /></button>
+        <button onclick="emptyCart()" formaction="http://dnb.no">Pay by card <i class="fa fa-credit-card"></i></button>
+      </div>
+
+    </div>
+  </div>
+
+  <!--Getting the footer from the script-->
+  <div id="divFooter"></div>
+  <script src="../scripts/cart.js"></script>
+  <script src="../scripts/footerAndHeader.js"></script>
+</body>
+
+</html>

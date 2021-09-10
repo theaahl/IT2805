@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CoffeeCorner</title>
+    <link rel="icon" type="img/png" href="../img/logo/logorod.png">
+    <link href="../CSS/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div id="divHeader"></div>
+    <!--Getting the header from the script-->
+    <div class="container">
+        <div id="left">
+            <!--Creating a form for different options on the page-->
+            <form id="drinkForm">
+                <p><b>What would you like?</b></p>
+                <label for="coffee"> Coffee
+                    <input type="checkbox" id="coffee" name="coffee">
+                    <span class="checkmark"></span>
+                </label><br>
+                <label for="tea"> Tea
+                    <input type="checkbox" id="tea" name="tea">
+                    <span class="checkmark"></span>
+                </label><br>
+                <p class="pref"><b>Preferences:</b></p>
+                 <label for="hot"> Hot
+                    <input type="checkbox" id="hot" name="hot">
+                    <span class="checkmark"></span>
+                </label><br>
+                <label for="cold"> Cold
+                    <input type="checkbox" id="cold" name="cold">
+                    <span class="checkmark"></span>
+                </label><br>
+            </form>
+        </div>
+
+        <div id="right">
+            <div id="divDrinks"></div>
+        </div>
+    </div>
+    <!--Getting the footer from the script-->
+    <div id="divFooter"></div>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="../scripts/footerAndHeader.js"></script>
+    <script src="../scripts/drinks.js"></script>
+    <script>
+        generateHeader();
+        generateFooter();
+        generateDrinks(document.getElementById('divDrinks'), drinks);
+        leftsize();
+    </script>
+</body>
+
+</html>
