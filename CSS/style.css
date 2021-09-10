@@ -1,0 +1,451 @@
+#background {
+    height: 100vh; /*viewport height / width*/
+    width: 100vw;
+    position: relative;
+    min-height: 100vh;
+}
+
+body{
+    background-image: url("../img/div/background.jpg");
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    flex:1;
+    min-height: 100vh;
+    position: relative;
+}
+.pref{
+    margin-top: 0;
+}
+
+#title{
+    color: white;
+    text-shadow: 2px 2px black;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.changed{
+    background-color: #629c70;/*#97b58f;*/
+}
+
+
+#navbar ul li, #navbarHome ul li{
+    display: inline-block; 
+    padding:27px 10px;
+
+}
+
+#navbar ul a, #navbarHome ul a{
+    font-size:32px;
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px black;
+}
+
+#navbar ul, #navbarHome ul{
+    margin-right: 50px;
+}
+
+#navbar ul a:hover, #navbarHome ul a:hover{
+    color: #e3dad1;
+}
+
+#navbar, #navbarHome{
+    position: fixed;
+    clear:both;
+    overflow:auto;
+    width: 100%;
+    /*margin-bottom: 10%;*/
+    height: 110px;
+    
+}
+
+#navbarHome{
+    transition: background-color 0.3s;
+    transition-timing-function: ease-in;
+}
+#navbar{
+    background-color: #629c70;
+    z-index: 1;
+}
+
+nav{
+    float:right;
+}
+
+.logo img{float:left;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+
+/*for slideshow*/
+
+*{
+    box-sizing: border-box;
+}
+.mySlides {
+    display: none;
+}
+.slides {
+    vertical-align: middle;
+    height: 100vh;
+    width: 100vw;
+}
+
+#text{
+    background-color: #e3dad1;
+    margin: 10%;
+    padding-bottom: 1500px;
+    width: 80%;
+}
+
+.container{
+    background-color: #e3dad1;
+    margin: 140px 10% 13% 10%;
+    display: inline-block;
+    width: 80%;
+    height: 100%;
+    border-radius:5px;
+    min-height: 250px;
+    font-size: 18px;
+}
+
+#right, #left{
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+#right{
+    width: 70%;
+}
+
+#left{
+    width: 30%;
+}
+
+form{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 200px;
+    background-color: rgba(118, 94, 69, 0.2);
+    padding: 10px;
+    margin: 20px;
+    border-radius: 3px;
+    box-shadow: 3px 5px rgba(118, 94, 69, 0.3);
+}
+
+label {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+}
+
+/* When the checkbox is checked, add a brown background */
+label input:checked ~ .checkmark {
+    background-color:seagreen;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+label input:checked ~ .checkmark:after {
+    display: block;
+}
+/* p3changes are only css for the p3changes.html page*/
+.p3changes, .p4testing {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 5px rgba(118, 94, 69, 0.2);
+    margin: 12px 0;
+    padding: 10px 10px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.p3changesheader, .p4testingheader  {
+    text-align: center;
+    color: cadetblue;
+}
+/*styling for the divs that contain the food/drinkdescription and images*/
+.foodItem{
+    float: left;
+    height: auto;
+    background-color: white;
+    display: inline-block;
+    width: 95%;
+    margin: 10px 0 10px 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.descriptionEmpty {
+    font-size: 23px;
+    color: red;
+}
+
+.image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: right;
+    width: 40%;
+    padding-bottom: 250px;
+    display: inline-block;
+}
+
+.divText {
+    float: left;
+    width: 55%;
+}
+
+/*styling for the button so it looks cooler*/
+button{
+    background-color: #C9E5D8;
+    border-radius: 3px;
+    box-shadow: 2px 3px #a5c7b7;/*rgba(180, 206, 194, 0.3);*/
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    padding: 8px;
+    margin-left: 10px;
+    /*position: absolute;
+    justify-content: flex-end;
+    display: flex;*/
+
+}
+button:hover{
+    /*transform: translateY(3px);*/
+    background-color: rgb(87,170,123);
+}
+
+button:active{
+    transform: translateY(3px);
+    background-color: rgb(87,170,123);
+}
+#aboutright, #aboutleft{
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+/*About us side*/
+#aboutleft {
+    width: 50%;
+    display: inherit;
+}
+
+#aboutleft h2 {
+    padding-left: 50px;
+}
+
+#aboutleft p {
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+}
+
+#aboutleft #map {
+    margin-left: 50px;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 2px 2px rgba(118, 94, 69, 0.2);
+}
+
+#aboutright {
+    width: 50%;
+    display: inherit;
+    height: inherit;
+}
+
+#aboutright img{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 20%;
+   /* position: -webkit-sticky;
+    position: sticky;
+    top: 150px;*/
+    border-radius: 10px;
+    box-shadow: 2px 2px rgba(118, 94, 69, 0.2);
+}
+
+
+/*homepage*/
+#homepage {
+    background-color: #e3dad1;
+    padding: 40px 40px;
+    width: 80%;
+    margin: 2% 10% 170px 10%;
+    flex-direction: column;
+    overflow: auto;
+    display: inline-block;
+    border-radius: 10px;
+    
+}
+#homepage > figure {
+
+    float: left;
+}
+#homepage > p {
+
+    text-align: center;
+    top: 17px;
+    font-size: 23px;
+}
+#quote {
+    font-size: 10px;
+}
+
+#title p{
+    margin:5px;
+}
+
+/*footer styling - we want it to appear at the bottom of the site*/
+footer {
+    width: 100%;
+    height: 120px;
+    bottom:0;
+        
+    padding-top: 25px;
+    background-color: #629c70;
+    color: black;
+    text-align: center;
+    font-family:sans-serif;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    
+
+}
+
+.column a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: grey;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/*for a responsive page*/
+@media only screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        background-color: #629C70;
+        padding-bottom: 40px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .image {
+        display: none;
+    }
+    .dixText {
+        width: 100%;
+    }
+}
+
+#Shopping {
+    background-color: #ffffff;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin: 30px;
+    padding: 20px;
+    font-size: 23px;
+  }
+  
+  #Shopping ul {
+    list-style-type: none;
+    text-align: left;
+  }
+
+ #handlevognListe > li{
+      display: flex;
+      justify-content: space-between;
+      width:60%;
+      margin-left: 20%;
+  }
+  
+  
+ #shopping_buttons {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding: 20px;
+    color: lavender;
+  }
+
+#earth{
+    font-family: "Snell Roundhand", cursive;
+    width: 100%;
+    font-size: 27px;
+    margin-top: 5px;
+    /*white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;*/
+    display: inline-block;
+    color: seagreen;  
+}
+
+h1 {
+    font-size: 32px;
+}
+
+@media only screen and (max-device-width: 600px) {
+   .slides {
+        height: 50%;
+       width: 100%;
+    }
+}
+
+  @media only screen and (max-width: 600px) {
+   #handlevognListe > li{
+        margin-left: 0;
+      }
+}
+
