@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="img/png" href="../img/logo/logorod.png">
+  <title>CoffeeCorner</title>
+  <link href="../CSS/style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet" />
+  <script>
+    //Declearing the function here, so that the map api loads the function before the api is called.
+    function cafeMap() {
+      var coord = { lat: 63.419128, lng: 10.402175 };
+      var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: coord,
+      });
+      var marker = new google.maps.Marker({
+        position: coord,
+        map: map,
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <div id="divHeader"></div>
+  <!--Getting the header from the script-->
+  <div class="container">
+    <h1 style="text-align: center">About Us</h1>
+    <div id="aboutleft">
+      <h2>Who we are</h2>
+      <p>
+        CoffeeCorner is an organic coffeeShop in Neverland founded by our CEO
+        Solverg Olsen in 2019. We offer both take-out and dine-in on our
+        delicious pastries and wonderful coffee and tea.
+      </p>
+      <h2>Our Vision</h2>
+      <p>
+        <i>Enjoy coffee and food of the highest quality while saving the environment</i>
+        <br />
+        <br />
+        We strive to serve you the best organic foods and drinks. Whether you
+        want to eat in or get take-away you will get high quality organic
+        product. We think that great ideas come from great coffee and we are
+        therefore using the best beans in our coffee. We also grow our own
+        vegetabels in order to reduce pollution from shipping and save the
+        environment. It is important to be able to enjoy our product even if
+        your daily life is busy. Therefore you can order online and get your
+        product without wasting time by waiting in a queue.
+      </p>
+        <h2>Opening hours</h2>
+      <p>
+        Mon-Fri: 06:30-17:00 <br/>
+        Sat-Sun: 08:00-18
+      </p>
+      <h2>Contact us</h2>
+      <p>
+        E-mail: coffeecorner@corner.no <br />Tlf: 12345678 <br />Address:
+        Neverland Street 1, 0001 Neverland <br />
+      </p>
+      <h2>Our Location</h2>
+      <div id="map" style="width: 80%; height: 250px"></div>
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpyZ3r-L0KMH3Hv7Xw5xfbqyVtKWRwebw&callback=cafeMap"></script>
+    </div>
+    <div id="aboutright">
+      <img src="../img/div/coffeecorner.png" alt="shop" width="500" />
+    </div>
+  </div>
+
+  <!--Getting the footer from the script-->
+  <div id="divFooter"></div>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="../scripts/footerAndHeader.js"></script>
+  <script src="../scripts/index.js"></script>
+  <script>
+    generateHeader();
+    generateFooter();
+  </script>
+</body>
+
+</html>
